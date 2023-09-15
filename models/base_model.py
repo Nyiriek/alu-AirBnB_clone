@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """A class that defines all common attributes for other classes"""
-import uuid
+from uuid import uuid4
 from datetime import datetime
 import models
 
@@ -36,7 +36,6 @@ class BaseModel:
 
     def save(self):
         """save definition"""
-        from models import storage
         self.update_at = datetime.new()
         storage.save()
 

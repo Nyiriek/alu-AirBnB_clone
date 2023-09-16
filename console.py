@@ -4,6 +4,7 @@
 import cmd
 import sys
 import json
+from models.engine import name_class
 from models import storage
 from models import City
 from models import Place

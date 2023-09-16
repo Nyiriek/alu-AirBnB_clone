@@ -11,8 +11,8 @@ from models import State
 from models import Amenity
 
 BaseModel = base_model.BaseModel
-name_class = ["BaseModel", "User", "Place", 
-            "State", "City", "Amenity", "Review"]
+name_class = ["BaseModel", "User", "Place",
+                "State", "City", "Amenity", "Review"]
 
 
 class FileStorage:

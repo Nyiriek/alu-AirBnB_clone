@@ -1,14 +1,9 @@
-#!/user/bin/python3
-"""state module for the AirBnB clone"""
+#!/usr/bin/python3
+""" State class """
 
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """State class"""
-
-    # class attributes
+    """ State class """
     name = ""
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)

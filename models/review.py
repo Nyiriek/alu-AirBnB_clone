@@ -1,15 +1,12 @@
 #!/usr/bin/python3
-"""user module for the AirBnB clone"""
+"""Review class
+"""
 
 from models.base_model import BaseModel
 
 
 class Review(BaseModel):
-    """Review class"""
-
-    place_id = ""  # string - empty string: it will be the Place.id
-    user_id = ""  # string - empty string: it will be the User.id
-    text = ""  # string - empty string
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    """ Review class """
+    place_id = ""
+    user_id = ""
+    text = ""

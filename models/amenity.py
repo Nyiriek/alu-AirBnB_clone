@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-"""Amenity module for the AirBnB clone"""
+""" Amenity class """
 
 from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
-    """Amenity class"""
-
+    """ Amenity class """
     name = ""
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)

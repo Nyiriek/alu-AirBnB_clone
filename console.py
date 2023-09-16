@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""AirBnB Console Application"""
+"""Update command interpreter"""
 
 import cmd
 import sys

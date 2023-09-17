@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Update command interpreter"""
+"""AirBnB Console Application"""
 
 import cmd
 import sys
@@ -185,6 +185,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, args):
         """Updates an instance based on the class name and id
+        update: update <class_name> <instance id> <attribute name>
+        "<attribute value>"
         """
 
         all_args = parse_args(args)
@@ -222,7 +224,7 @@ class HBNBCommand(cmd.Cmd):
         try:
             attr_value = all_args[3]
             obj_attr = obj.__dict__[attr_name]
-        except KeyError:
+        except KeyError:  # if attr_name(key) not in obj, add it to the object
             obj.__dict__.update({attr_name: attr_value})
             storage.save()
             return

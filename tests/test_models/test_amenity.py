@@ -17,3 +17,18 @@ class TestAmenity(unittest.TestCase):
         m1c = self.test_model1.created_at
         m2c = self.test_model2.created_at
         self.assertTrue(m1c != m2c)
+        self.assertTrue(type(m1c) is datetime.datetime)
+
+    def test_types(self):
+    
+        self.assertTrue(type(self.test_model1.name) is str)
+
+    def test_save(self):
+    
+        m1u = self.test_model1.updated_at
+        self.test_model1.save()
+        m1u_saved = self.test_model1.updated_at
+        self.assertFalse(m1u == m1u_saved)
+
+if _name_ == '__main__':
+    unittest.main()

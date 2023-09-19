@@ -1,19 +1,18 @@
 #!/usr/bin/python3
-""" Contains unittests for FileStorage class """
 import unittest
-import os
-from models import storage
+from models.engine.file_storage import FileStorage
 from models.base_model import BaseModel
+from models import storage
 
 
-class TestFileStorageClass(unittest.TestCase):
-    """ Tests FileStorage class """
+class TestFileStorage(unittest.TestCase):
+    ''' Test File storage '''
 
-    def test_all(self):
-        """ Tests all method """
-        # create storage instance and instance of BaseModel
+    def test_FileStorage(self):
+        """test_FileStorage"""
+        bm = BaseModel()
+        self.assertIn("BaseModel." + bm.id, storage.all().keys())
 
-        obj = BaseModel()
-        __objects = storage.all()
-        # test that storage.all() returns dictionary
-        self.assertIsI
+
+if _name_ == "__main__":
+    unittest.main()
